@@ -42,5 +42,16 @@
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
+  },
+  "githubActions": {
+    "steps": [
+      {
+        "name": "Deploy to GitHub Pages",
+        "run": "npm run deploy",
+        "env": {
+          "GITHUB_TOKEN": "${{ secrets.GITHUB_TOKEN }}"
+        }
+      }
+    ]
   }
 }
